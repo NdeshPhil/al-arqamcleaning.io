@@ -38,10 +38,13 @@ nav {
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--primary-blue);
+    text-decoration: none; /* Added for logo link */
 }
 
-.logo span {
-    color: var(--dark-slate);
+.logo img {
+    display: block;
+    height: 50px; /* Adjust this to control logo size */
+    width: auto;
 }
 
 .nav-links {
@@ -91,7 +94,8 @@ nav {
 
 /* 5. HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.9)), url('../images/hero-bg.jpg') center/cover no-repeat;
+    /* 🔽 ONLY THIS LINE WAS UPDATED 🔽 */
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.9)), url('../images/hero-image.jpg') center/cover no-repeat;
     color: var(--white);
     text-align: center;
     padding: 10rem 5% 6rem; /* Extra top padding for fixed nav */
