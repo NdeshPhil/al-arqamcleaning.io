@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Al-Arqam Cleaning - Doha, Qatar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles specific to the Services page */
+        .service-detail {
+            background: var(--white);
+            margin: 3rem auto;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--primary-blue);
+        }
+        .service-detail h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-detail h2 i {
+            color: var(--light-aqua);
+        }
+        .service-detail ul {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+        .service-detail li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .service-detail li:before {
+            content: '✓';
+            color: var(--primary-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .service-cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--light-aqua);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as homepage) -->
+    <header>
+        <nav>
+            <div class="logo">Al-Arqam <span>Cleaning</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn">BOOK NOW</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 7rem 5% 3rem;"> <!-- Added top padding for fixed nav -->
+        <h1 style="text-align: center; margin-bottom: 0.5rem; color: var(--dark-slate);">Our Professional Cleaning Services</h1>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--dark-slate); font-size: 1.1rem;">
+            We offer a comprehensive range of cleaning solutions tailored for homes and businesses across Doha. Explore our services below.
+        </p>
+
+        <!-- Service 1: Home Cleaning -->
+        <section class="service-detail" id="home">
+            <h2><i class="fas fa-home"></i> Home Cleaning</h2>
+            <p><strong>Overview:</strong> Our home cleaning service covers all areas of your home — from living rooms to kitchens and bedrooms — ensuring your space is fresh and hygienic.</p>
+            <p><strong>What’s Included:</strong></p>
+            <ul>
+                <li>Dusting & wiping all surfaces</li>
+                <li>Floor cleaning (vacuuming & mopping)</li>
+                <li>Bathroom sanitization</li>
+                <li>Kitchen cleaning (countertops, sink, appliance exteriors)</li>
+                <li>Trash removal</li>
+                <li>Making beds (upon request)</li>
+            </ul>
+            <div class="service-cta">
+                <a href="booking.html?service=home" class="btn">Book Home Cleaning</a>
+            </div>
+        </section>
+
+        <!-- Service 2: Office & Commercial Cleaning -->
+        <section class="service-detail" id="office">
+            <h2><i class="fas fa-building"></i> Office & Commercial Cleaning</h2>
+            <p><strong>Overview:</strong> Professional cleaning for workspaces, reception areas, meeting rooms, and common areas to maintain a productive and healthy environment.</p>
+            <p><strong>What’s Included:</strong></p>
+            <ul>
+                <li>Desk & surface cleaning and sanitization</li>
+                <li>Floor care (vacuuming carpets, mopping hard floors)</li>
+                <li>Trash and recycling removal</li>
+                <li>Restroom sanitization and restocking</li>
+                <li>Window and glass door cleaning</li>
+                <li>High-touch point disinfection (door handles, light switches)</li>
+            </ul>
+            <div class="service-cta">
+                <a href="booking.html?service=office" class="btn">Book Office Cleaning</a>
+            </div>
+        </section>
+
+        <!-- Service 3: Deep & Specialized Cleaning -->
+        <section class="service-detail" id="deep">
+            <h2><i class="fas fa-tint"></i> Deep & Specialized Cleaning</h2>
+            <p><strong>Overview:</strong> Intensive cleaning for high-traffic areas, stubborn stains, and detailed attention spots. Perfect for spring cleaning, post-renovation, or periodic maintenance.</p>
+            <p><strong>What’s Included (Sample Add-ons):</strong></p>
+            <ul>
+                <li>Carpet shampooing and stain removal</li>
+                <li>Upholstery cleaning for sofas and chairs</li>
+                <li>Appliance deep-cleaning (interior of ovens, refrigerators)</li>
+                <li>Tile and grout deep-cleaning</li>
+                <li>Inside cabinet and wardrobe cleaning</li>
+                <li>Blinds and light fixture dusting</li>
+            </ul>
+            <div class="service-cta">
+                <a href="booking.html?service=deep" class="btn">Book Deep Cleaning</a>
+            </div>
+        </section>
+
+        <!-- Service 4: Laundry & Ironing Services -->
+        <section class="service-detail" id="laundry">
+            <h2><i class="fas fa-tshirt"></i> Laundry & Ironing Services</h2>
+            <p><strong>Overview:</strong> Reliable laundry and ironing services for busy individuals and families. We handle your garments with care for a fresh, crisp finish.</p>
+            <p><strong>Our Process:</strong></p>
+            <ul>
+                <li>Professional washing and drying</li>
+                <li>Expert ironing and folding</li>
+                <li>Handling of delicate fabrics</li>
+                <li>Option for eco-friendly detergents</li>
+                <li>Convenient pick-up and delivery (upon request)</li>
+            </ul>
+            <div class="service-cta">
+                <a href="booking.html?service=laundry" class="btn">Inquire About Laundry Service</a>
+            </div>
+        </section>
+
+        <!-- Service 5: Contract Cleaning -->
+        <section class="service-detail" id="contract">
+            <h2><i class="fas fa-calendar-alt"></i> Contract Cleaning</h2>
+            <p><strong>Overview:</strong> Customizable and cost-effective plans for repeated cleaning needs — weekly, bi-weekly, or monthly. Ideal for offices, retail spaces, and regular home maintenance.</p>
+            <p><strong>Benefits:</strong></p>
+            <ul>
+                <li>Consistent quality and reliability</li>
+                <li>Customized schedules and checklists</li>
+                <li>Dedicated cleaning team for familiarity</li>
+                <li>Priority scheduling and flexible adjustments</li>
+                <li>Discounted rates for long-term contracts</li>
+            </ul>
+            <div class="service-cta">
+                <a href="contact.html" class="btn">Request a Contract Quote</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Same as homepage) -->
+    <footer>
+        <p>© <span id="currentYear"></span> Al-Arqam Cleaning. All rights reserved.</p>
+        <p>Tel: 40292163 | Mob: 33174743 | Email: abdelrahim@al-arqamcleaning-qatar.com | P.O. Box: 14884 – Doha – Qatar</p>
+        <p style="margin-top: 1rem;"><a href="index.html" style="color: var(--light-aqua);">Home</a> | <a href="services.html" style="color: var(--light-aqua);">Services</a> | <a href="contact.html" style="color: var(--light-aqua);">Contact</a> | <a href="booking.html" style="color: var(--light-aqua);">Book Now</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

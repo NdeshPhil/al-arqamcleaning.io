@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Al-Arqam Cleaning - Doha, Qatar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for the Contact page */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        .contact-info, .contact-form-container {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.8rem;
+        }
+        .contact-detail i {
+            color: var(--primary-blue);
+            font-size: 1.3rem;
+            min-width: 40px;
+            padding-top: 5px;
+        }
+        .contact-detail div h4 {
+            margin-bottom: 0.3rem;
+            color: var(--dark-slate);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-slate);
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        /* Map Container */
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            display: block;
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Al-Arqam <span>Cleaning</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn">BOOK NOW</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 7rem 5% 3rem;">
+        <h1 style="text-align: center; color: var(--primary-blue); margin-bottom: 1rem;">Get in Touch</h1>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; color: var(--dark-slate);">
+            We're here to help. Reach out to us for inquiries, quotes, or to schedule a service. Our team in Doha is ready to assist you.
+        </p>
+
+        <div class="contact-container">
+            <!-- Left Column: Contact Information -->
+            <section class="contact-info">
+                <h2 style="color: var(--dark-slate); margin-bottom: 1.5rem;">Contact Information</h2>
+
+                <div class="contact-detail">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Telephone</h4>
+                        <p><a href="tel:+97440292163" style="color: var(--primary-blue); text-decoration: none;">40292163</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <h4>Mobile</h4>
+                        <p><a href="tel:+97433174743" style="color: var(--primary-blue); text-decoration: none;">33174743</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:abdelrahim@al-arqamcleaning-qatar.com" style="color: var(--primary-blue); text-decoration: none;">abdelrahim@al-arqamcleaning-qatar.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>P.O. Box 14884<br>Doha, Qatar</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--soft-gray);">
+                    <h4 style="color: var(--dark-slate); margin-bottom: 1rem;">Business Hours</h4>
+                    <p><strong>Sunday - Thursday:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Friday:</strong> 10:00 AM - 4:00 PM</p>
+                    <p><strong>Saturday:</strong> By appointment</p>
+                </div>
+            </section>
+
+            <!-- Right Column: Contact Form -->
+            <section class="contact-form-container">
+                <h2 style="color: var(--dark-slate); margin-bottom: 1.5rem;">Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select a topic</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="quote">Request a Quote</option>
+                            <option value="service">Service Question</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Please type your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                        * Required fields. We aim to respond within 24 hours.
+                    </p>
+                </form>
+            </section>
+        </div>
+
+        <!-- Map Section -->
+        <section class="map-container">
+            <h2 style="color: var(--dark-slate); margin-bottom: 1rem;">Our Location in Doha</h2>
+            <!-- Embedded Google Map for Doha, Qatar (Replace coordinates with your exact location) -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7210.23026041804!2d51.49086607465966!3d25.285847711750122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534ffdce87f%3A0x44d9319f78cfd4b1!2sDoha%2C%20Qatar!5e0!3m2!1sen!2s!4v1641234567890!5m2!1sen!2s"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Al-Arqam Cleaning Location in Doha, Qatar">
+            </iframe>
+            <p style="text-align: center; margin-top: 0.5rem; font-style: italic; color: var(--text-light);">
+                Map showing Doha, Qatar. Specific location details provided upon service confirmation.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© <span id="currentYear"></span> Al-Arqam Cleaning. All rights reserved.</p>
+        <p>Tel: 40292163 | Mob: 33174743 | Email: abdelrahim@al-arqamcleaning-qatar.com | P.O. Box: 14884 – Doha – Qatar</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html" style="color: var(--light-aqua);">Home</a> |
+            <a href="about.html" style="color: var(--light-aqua);">About</a> |
+            <a href="services.html" style="color: var(--light-aqua);">Services</a> |
+            <a href="contact.html" style="color: var(--light-aqua);">Contact</a> |
+            <a href="booking.html" style="color: var(--light-aqua);">Book Now</a>
+        </p>
+    </footer>
+
+    <script>
+        // Simple form handling for the contact page (prevents page reload and shows a message)
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Stop the form from submitting normally
+
+                    // Simple validation check
+                    let isValid = true;
+                    const requiredFields = this.querySelectorAll('[required]');
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.style.borderColor = 'red';
+                        } else {
+                            field.style.borderColor = '#ddd';
+                        }
+                    });
+
+                    if (isValid) {
+                        // In a real site, you would send the data to a server here.
+                        // For now, we show an alert and reset the form.
+                        alert('Thank you for your message! We have received it and will get back to you shortly.');
+                        contactForm.reset();
+                    } else {
+                        alert('Please fill in all required fields (marked with *).');
+                    }
+                });
+            }
+
+            // Update the year in the footer
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

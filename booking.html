@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service | Al-Arqam Cleaning - Doha, Qatar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for the Booking page */
+        .booking-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .booking-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light-aqua);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-slate);
+        }
+        .form-group label.required:after {
+            content: " *";
+            color: #e63946;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border 0.3s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .btn-block {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        .form-note {
+            margin-top: 2rem;
+            padding: 1.2rem;
+            background-color: var(--light-aqua);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--dark-slate);
+        }
+        .form-note i {
+            color: var(--primary-blue);
+            margin-right: 0.5rem;
+        }
+        /* Success message styling (hidden by default) */
+        #successMessage {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 8px;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Al-Arqam <span>Cleaning</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn">BOOK NOW</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 7rem 5% 3rem;">
+        <div class="booking-container">
+            <div class="booking-header">
+                <h1 style="color: var(--primary-blue);">Request a Cleaning Service</h1>
+                <p style="color: var(--dark-slate); font-size: 1.1rem;">Fill out the form below and we'll get back to you promptly to confirm your booking and provide a quote.</p>
+            </div>
+
+            <form id="bookingForm">
+                <!-- Customer Details -->
+                <h3 style="color: var(--dark-slate); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--soft-gray);">
+                    <i class="fas fa-user-circle"></i> Your Details
+                </h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName" class="required">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile" class="required">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required placeholder="e.g., 33174743">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceType" class="required">Service Type</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="" disabled selected>-- Select a service --</option>
+                            <option value="home">Home Cleaning</option>
+                            <option value="office">Office & Commercial Cleaning</option>
+                            <option value="deep">Deep & Specialized Cleaning</option>
+                            <option value="laundry">Laundry & Ironing Services</option>
+                            <option value="contract">Contract Cleaning (Ongoing)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Scheduling -->
+                <h3 style="color: var(--dark-slate); margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--soft-gray);">
+                    <i class="fas fa-calendar-alt"></i> Scheduling
+                </h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date" class="required">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <select id="time" name="time">
+                            <option value="" selected>Any time</option>
+                            <option value="morning">Morning (8 AM - 12 PM)</option>
+                            <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                            <option value="evening">Evening (4 PM - 7 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Location & Details -->
+                <h3 style="color: var(--dark-slate); margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--soft-gray);">
+                    <i class="fas fa-map-marker-alt"></i> Service Location & Details
+                </h3>
+                <div class="form-group">
+                    <label for="address" class="required">Full Address</label>
+                    <textarea id="address" name="address" required placeholder="Please provide the complete address for the service (Area, Street, Building/Villa number, etc.)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes / Special Instructions</label>
+                    <textarea id="notes" name="notes" placeholder="Any specific instructions, areas of focus, access details, or special requests..."></textarea>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">Please let us know about pets, parking, preferred cleaning products, or any other relevant information.</p>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i> REQUEST A SERVICE
+                </button>
+
+                <!-- Success Message (Hidden Initially) -->
+                <div id="successMessage">
+                    <i class="fas fa-check-circle" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #155724;">Thank You! Your Request Has Been Submitted.</h3>
+                    <p>We have received your service request for <strong><span id="summaryService"></span></strong> on <strong><span id="summaryDate"></span></strong>. We will contact you at <strong><span id="summaryPhone"></span></strong> shortly to confirm your booking and provide a quote.</p>
+                    <p style="margin-top: 1rem;"><em>You can expect a call or message within 24 hours.</em></p>
+                    <button type="button" onclick="resetForm()" class="btn" style="margin-top: 1.5rem;">
+                        <i class="fas fa-plus"></i> Submit Another Request
+                    </button>
+                </div>
+
+                <!-- Form Note -->
+                <div class="form-note">
+                    <p><i class="fas fa-info-circle"></i> <strong>What happens next?</strong> After you submit this form, our team will review your request and contact you via phone or email to confirm availability, discuss details, and provide a final price quote. We aim to respond within 24 hours.</p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© <span id="currentYear"></span> Al-Arqam Cleaning. All rights reserved.</p>
+        <p>Tel: 40292163 | Mob: 33174743 | Email: abdelrahim@al-arqamcleaning-qatar.com | P.O. Box: 14884 – Doha – Qatar</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html" style="color: var(--light-aqua);">Home</a> |
+            <a href="about.html" style="color: var(--light-aqua);">About</a> |
+            <a href="services.html" style="color: var(--light-aqua);">Services</a> |
+            <a href="contact.html" style="color: var(--light-aqua);">Contact</a> |
+            <a href="booking.html" style="color: var(--light-aqua);">Book Now</a>
+        </p>
+    </footer>
+
+    <script>
+        // Set the minimum date for the date picker to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').setAttribute('min', today);
+
+            // Update the year in the footer
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+
+        // Handle form submission
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Stop the form from submitting normally
+
+                // Simple validation
+                let isValid = true;
+                const requiredFields = this.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = '#e63946'; // Red for error
+                    } else {
+                        field.style.borderColor = '#ddd'; // Reset to default
+                    }
+                });
+
+                if (isValid) {
+                    // Get form values for the summary
+                    const serviceType = document.getElementById('serviceType');
+                    const serviceText = serviceType.options[serviceType.selectedIndex].text;
+                    const date = document.getElementById('date').value;
+                    const phone = document.getElementById('mobile').value;
+
+                    // Format the date for display
+                    const formattedDate = new Date(date).toLocaleDateString('en-US', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+
+                    // Populate the success message
+                    document.getElementById('summaryService').textContent = serviceText;
+                    document.getElementById('summaryDate').textContent = formattedDate;
+                    document.getElementById('summaryPhone').textContent = phone;
+
+                    // Hide the form and show the success message
+                    bookingForm.style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+
+                    // In a real website, you would send the form data to a server here.
+                    console.log('Form would be submitted with:', {
+                        name: document.getElementById('fullName').value,
+                        phone: phone,
+                        service: serviceText,
+                        date: date
+                    });
+                } else {
+                    alert('Please fill in all required fields (marked with *).');
+                }
+            });
+        }
+
+        // Function to reset the form and show it again
+        function resetForm() {
+            document.getElementById('bookingForm').reset();
+            document.getElementById('bookingForm').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'none';
+
+            // Reset any red borders from validation
+            const fields = document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea');
+            fields.forEach(field => {
+                field.style.borderColor = '#ddd';
+            });
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
